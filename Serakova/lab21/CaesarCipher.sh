@@ -3,16 +3,19 @@
 function help {
     echo "usage: ./script --input=[]"
     echo "--input - source directory with subdirectories"
+    echo "--key - Caesar cipher key (integer)"
 }
 
 function encoding {
-    if [[ $# -ne 1 ]]; then
+    if [[ $# -ne 2 ]]; then
         help
     else
-        for file in $(find "$1" -type f -name "*.txt"); do
+        directory=$1
+        key= $2
+        for file in $(find "$directory" -type f -name "*.txt"); do
             echo "File encoding: $file"
             echo "File content: $(cat "$file")"
-            cat "$file" | tr '[A-Z]' '[D-ZA-C]' | tr '[a-z]' '[d-za-c]' | tee "$file"
+            cat "$file" | tr '[A-Za-z]' "[${ALPHABET:$key}${ALPHABET::$key}]" | tee "$file"
             echo "New file content: $(cat "$file")"
         done
         echo "Done!"
@@ -20,11 +23,15 @@ function encoding {
 }
 
 function parse_args {
+    directory=""
+    key=""
     for arg in "$@"; do
         case $arg in
             --input=*)
-                flag="${arg#*=}"
-                encoding "${flag}"
+                directory="${arg#*=}"
+                ;;
+            --key=*)
+                key="${arg#*=}"
                 ;;
             --help)
                 help
@@ -37,6 +44,16 @@ function parse_args {
                 ;;
         esac
     done
+    if [[ -z $directory || -z $key ]]; then
+        help
+        exit
+    fi
+    if ! [[ $key =~ ^[0-9]+$ ]]; then
+    echo "Error: key must be an integer"
+    exit
+fi
+    encoding "$directory" "$key"
 }
 
+ALPHABET="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 parse_args "$@"
