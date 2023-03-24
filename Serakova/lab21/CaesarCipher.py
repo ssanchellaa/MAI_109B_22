@@ -46,22 +46,15 @@ def parse_args():
             try:
                 key = int(arg.split('=')[1])
             except ValueError:
-                print('Key must be an integer')
-                sys.exit()
-
+                raise ValueError('Key must be an integer')
         elif arg == '--help':
             print('Unknown parameter:', arg)
             raise ValueError('Unknown parameter: ' + arg)
-            help()
-            sys.exit()
         else:
             print('Unknown parameter:', arg)
             raise ValueError('Unknown parameter: ' + arg)
     if directory is None or key is None:
-        raise ValueError('Unknown parameter: ' + arg)
-
-    if key != 3:
-        raise ValueError('Key is wrong')
+        raise ValueError('The directory is empty or the key is not set')
     encoding(directory, key)
 
 
