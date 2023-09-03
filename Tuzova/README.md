@@ -9,7 +9,7 @@
 | [`lab-23`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Tuzova/lab23) | None                   |
 | [`lab-24`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Tuzova/lab24) | None                |
 | [`lab-25`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Tuzova/lab25) | None                 |
-| [`lab-26`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Tuzova/lab26) | None |
+| [`lab-26`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Tuzova/lab26) | 1, 6 |
 | [`KP6`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Tuzova/KP6)      | None                  |
 | [`KP7`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Tuzova/KP7)      | None                  |
 | [`KP8`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Tuzova/KP8)      | None                 |
