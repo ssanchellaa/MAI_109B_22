@@ -1,0 +1,135 @@
+\documentclass[12pt,a4paper]{book}
+
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{layout}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{setspace,amsmath}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+
+\setlength{\parindent}{1cm}
+\setcounter{page}{155}
+\pagestyle{headings}
+
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  top=13mm,
+  right=5mm,
+  bottom=5mm,
+  left=5mm
+}
+
+
+\begin{document}
+    \begin{center}
+        \textbf{\S 3. Неявные функциии}
+    \end{center}
+    удовлетворяющие условию (1).
+    
+    Исследуем на дифференцируемость эти функции при $x = 0$. С этой целью вычислим $\varphi'\_(0)$. Имеем
+    \flushleft{$\displaystyle \varphi'\_(0) = \lim_{\Delta x \to -0} \frac{\varphi(\Delta x) - \varphi(0)}{\Delta x} = \lim_{\Delta x \to -0} \frac{1}{\Delta x} \sqrt{\sqrt{2a^2 \Delta x^2 + \frac{a^4}{4}} - \Delta x^2 - \frac{a^2}{2}} =$}
+    \begin{center}
+        $\displaystyle = \lim_{\Delta x \to -0} \frac{\sqrt{2 a^2 \Delta x^2 + \frac{a^4}{4} - \Delta x^4 - \Delta x^2 a^2 - \frac{a^4}{4}}}{\Delta x \sqrt{\sqrt{2a^2 \Delta x^2 + \frac{a^4}{4}} + \Delta x^2 + \frac{a^2}{2}}} = \lim_{\Delta x \to -0} \frac{|\Delta x| \sqrt{a^2 - \Delta x^2}}{\Delta x \sqrt{\sqrt{2a^2 \Delta x^2 + \frac{a^4}{4}} + \Delta x^2 + \frac{a^2}{2}}} =$
+    \end{center}
+    \flushright{$\displaystyle = \lim_{\Delta x \to -0} \frac{-\sqrt{a^2 - \Delta x^2}}{\sqrt{\sqrt{2a^2 \Delta x^2 + \frac{a^4}{4}} + \Delta x^2 + \frac{a^2}{2}}} = -1.$}
+    \flushleft{Аналогично находим $\displaystyle\varphi'_{+} (0) = \lim_{\Delta x \to -0} \frac{\varphi(\Delta x) - \varphi(0)}{\Delta x} = 1$. Отсюда сразу следует, что функции $y_{3}$ и $y_{4}$ не имеют производной при $x = 0$. Поскольку $y'_{1}\_(0) = -\varphi'\_(0) = 1, y'_{1+}(0) = \varphi'_{+}(0) = 1$, то функция $y_{1}$ имеет производную при $x = 0$, равную единице. Аналогично из равенств $y'_{2}(0) = \varphi'(0) = -1, \, $ $y'_{2+}(0) = - \varphi'_{+}(0) = -1$ следует дифференцируемость функции $y_{2}$ при $x = 0$, причем $y'_{2} (0) = -1. \blacktriangleright$}
+    
+    \flushleft{\textbf{100.} Найти $y'$ при $x = 0$ и $y = 0$, если}
+    \begin{equation}
+        (x^2+y^2)^2 = 3x^2y - y^3.
+    \end{equation}
+    
+    $\blacktriangleleft$ Представим кривую, определяемую уравнением (1), в параметрическом виде. С этой целью положим $y = tx$. Тогда из уравнения (1) найдем $x = \frac{3t^2 - t^3}{(1+t^2)^2}.$ Подставив найденное значение $x$ в равенство $y = tx$, получим $y = \frac{3t-t^3}{(1+t^2)^2}$. Заметим, что $x = 0$ и $y = 0$ при трех значениях параметра $t : t_{1} = 0, \, t_{2} = \sqrt{3}, \, t_{3} = - \sqrt{3}$. Остается вычислить производную от параметрически заданной функции при этих значениях параметра, т.е. при $x = 0$. Имеем
+    \begin{center}
+        $\displaystyle\frac{dy}{dx} = \frac{(1+t^2)(6t - 4t^3) - 4t(3t^2 - t^4)}{(1+t^2)(3-3t^2) - 4t(3t-t^3)}.$
+    \end{center}
+    Отсюда при $t = 0, \, t = \sqrt{3}$ и $t = -\sqrt{3}$ находим
+    \begin{center}
+        $\displaystyle y'_{1}(0) = 0, \, y_{2}(\sqrt{3}) = \sqrt{3}, \, y'_{3}(-\sqrt{3}) = - \sqrt{3}. \blacktriangleright$
+    \end{center}
+    
+    \textbf{101.} Найти $y', \, y''$ и $y'''$, если $x^2 + xy + y^2 = 3.$
+    \flushleft{$\blacktriangleleft$ Пользуясь формулой $\frac{dy}{dx} = - \frac{f'_{x}}{f'_{y}},$ получаем}
+    \begin{center}
+        $\displaystyle\frac{dy}{dx} = - \frac{2x+y}{x+2y}, \quad x \neq - 2y;$
+    \end{center}
+    \begin{center}
+        $\displaystyle\frac{d^2 y}{d x^2} = - \frac{(x+2y)(2+y')-(2x+y)(1+2y')}{(x+2y)^2} = - \frac{18}{(x+2y)^3}, \quad x \neq -2y;$
+    \end{center}
+    \begin{center}
+        $\displaystyle\frac{d^3 y}{d x^3} = \frac{54}{(x+2y)^4} ( 1+ 2y') = - \frac{162x}{(x+2y)^5} , \quad x \neq -2y; \blacktriangleright$
+    \end{center}
+    
+    \textbf{102.} Найти $y', \, y''$ и $y'''$ при $x = 0, \, y = 1$, если
+    \setcounter{equation}{0}
+    \begin{equation}
+        x^2 - xy + 2y^2 + x - y - 1 = 0.
+    \end{equation}
+    $\blacktriangleleft$ Трижды дифференцируя равенство (1):
+    \begin{center}
+        $2x - y - xy' + 4yy' + 1 - y' = 0,$
+    \begin{center}
+        $2-2y'-xy'' + 4{y'}^2 + 4y y'' - y'' = 0,$
+    \end{center}
+    \end{center}
+    \begin{center}
+        $-3y'' - xy''' + 12y' y'' + 4y y''' - y''' = 0$
+    \end{center}
+    \newpage
+    \begin{center}
+        Гл. 2. \textbf{Дифференциальное исчисление фукнций векторного аргумента}
+    \end{center}
+    и подставляя в результаты значения $x=0$ и $y=1$, получаем систему уравнений $3y' = 0, \,$ $2+3y''= 0, \, 2+3y'''=0$, из которой находим $y' = 0, \, y'' = - \frac{2}{3}, \, y'''= -\frac{2}{3}. \blacktriangleright$
+    
+    \textbf{103.} Доказать, что для кривой второго порядка
+    \begin{center}
+        $ax^2 + 2bxy + cy^2 + 2 dx + 2ey + f = 0$
+    \end{center}
+    справедливо равенство
+    \setcounter{equation}{0}
+    \begin{equation}
+        \frac{d^3}{dx^3} \left((y'')^{-\frac{2}{3}}\right) = 0.
+    \end{equation}
+    
+    $\blacktriangleleft$ Из уравнения кривой получаем
+    \begin{center}
+        $\displaystyle y = \frac{1}{c}\left(-(bx+e) \pm \sqrt{(b^2-ac)x^2 + 2(be-cd)x+e^2-cf)}\right).$
+    \end{center}
+    Находим вторую производную:
+    \begin{center}
+        $\displaystyle y' = \frac{1}{c}\left(-b \pm \frac{(b^2-ac)x+(be-cd)}{\sqrt{(b^2-ac)x^2+2(be-cd)x + e^2 -cf)}}\right),$
+    \end{center}
+    \begin{center}
+        $\displaystyle y''=\pm \frac{1}{c} \frac{(b^2-ac)(e^2-cf)-(be-cd)^2}{\sqrt{((b^2-ac)x^2+2(be-cd)x + e^2 -cf)^3}}.$
+    \end{center}
+    Отсюда получаем равенство
+    \begin{center}
+        $\displaystyle (y'')^{-\frac{2}{3}} = \left(\pm \frac{(b^2-ac)(e^2-cf)-(be-cd)^2}{c}\right)^{-\frac{2}{3}}((b^2-ac)x^2 + 2(be-cd)+e^2 -cf),$
+    \end{center}
+    из которого следует равенство (1). $\blacktriangleright$\\
+    \parДля функции $z=z(x,y)$ найти частные производные первого и второго порядков, если:
+    
+    \textbf{104.} $z^3-3xyz=a^3.$
+    
+    $\blacktriangleleft$ Частные производные функции $z$, определяемой уравнениям $F(x,y,z) = 0$, находим по формулам
+    \begin{center}
+        $\displaystyle\frac{\partial z}{\partial x} = - \frac{\frac{\partial F}{\partial x}}{\frac{\partial F}{\partial z}}, \quad \frac{\partial z}{\partial y} = - \frac{\frac{\partial F}{\partial y}}{\frac{\partial F}{\partial x}}.$
+    \end{center}
+    Для нашего случая имеем
+    \begin{center}
+        $\displaystyle\frac{\partial z}{\partial x} = - \frac{-3yz}{3z^2-3xy} = \frac{yz}{z^2-xy}, \quad \frac{\partial z}{\partial y} = \frac{xz}{z^2-xy}, \quad z^2 \neq xy.$
+    \end{center}
+    Учитывая, что $z=z(x,y)$, находим вторые производные:
+    \begin{center}
+        $\displaystyle\frac{\partial^2 z}{\partial x^2} = \frac{(z^2 - xy) y \frac{\partial z}{\partial x} - yz\left(2z \frac{\partial z}{\partial x} - y\right)}{(z^2-xy)^2} = \frac{(z^2-xy)\frac{yz}{z^2-xy} - yz \left(2z \frac{yz}{z^2-xy} - y\right)}{(z^2 - xy)^2} = - \frac{2x y^3 z}{(z^2 - xy)^3},$
+    \end{center}
+    \flushleft{$\displaystyle\frac{\partial^2 z}{\partial y^2} = - \frac{2yx^3 z}{(x^2 - xy)^3}, \quad \frac{\partial^2 z}{\partial x \, \partial y} = \frac{(z^2 - xy) \left(z+y \frac{\partial z}{\partial y}\right) - yz \left(2z \frac{\partial z}{\partial y} - x\right)}{(z^2 - xy)^2} = $}
+    \flushright{$\displaystyle = \frac{(z^2 - xy) \left(z + \frac{xyz}{x^2-xy}\right) - yz \left(\frac{2xz^2}{z^2 - xy} - x \right)}{(z^2 - xy)^2} = \frac{z(z^4 - 2z^2 xy - x^2 y^2)}{(z^2 - xy)^3}, \quad z^2 \neq xy. \blacktriangleright$}
+    
+    \flushleft{\textbf{105.} $\displaystyle z = \sqrt{x^2 - y^2} \tg\frac{z}{\sqrt{x^2-y^2}}.$}
+\end{document}
+
+
