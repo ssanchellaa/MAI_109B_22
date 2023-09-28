@@ -11,6 +11,6 @@
 | [`lab-25`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Serakova/lab25) | None                 |
 | [`lab-26`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Serakova/lab26) | None |
 | [`KP6`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Serakova/KP6)      | None                  |
-| [`KP7`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Serakova/KP7)      | 3,6                  |
+| [`KP7`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Serakova/KP7)      | None                  |
 | [`KP8`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Serakova/KP8)      | None                 |
 | [`KP9`](https://github.com/Maxsmile123/MAI_109B_22/tree/main/Serakova/KP9)      | None                  |
